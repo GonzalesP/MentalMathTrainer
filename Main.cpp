@@ -26,19 +26,18 @@ int choiceToInt(std::string choice) {
     return -1;
 }
 
-// int getRandomChoice() {
-//   std::default_random_engine generator;
-//   std::uniform_int_distribution<int> distribution(0,2);
-//   int choice = distribution(generator);
-
-//   return choice;
-// }
-
 int main() {
-  std::string userInput = "";
+  std::default_random_engine generator;
+  std::uniform_int_distribution<int> distribution(0,2);
 
-  std::cin >> userInput;
-  std::cout << choiceToInt(userInput) << std::endl;
+  // std::string userInput = "";
+  // std::cin >> userInput;
+  // std::cout << choiceToInt(userInput) << std::endl;
+
+  for (int i = 0; i < 20; i++) {
+    int choice = distribution(generator);
+    std::cout << choice << std::endl;
+  }
 
   return 0;
 }
