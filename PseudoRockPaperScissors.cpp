@@ -56,7 +56,7 @@ int main() {
     else {
       int userChoice = choiceToInt(userInput);
       if (userChoice == -1) {
-        std::cout << userInput << " is not a valid choice!" << std::endl;
+        std::cout << userInput << " is not a valid choice!" << std::endl << std::endl;
       }
       else {
         int botChoice = distribution(generator);
