@@ -5,18 +5,15 @@
 int main() {
   int minRange = 0, maxRange = 0;
   std::cout << "Enter the range of numbers you want to practice with:" << std::endl;
+
   std::cout << "Smallest value: ";
-  if (std::cin >> minRange) {
-    std::cout << std::endl << "Largest value: ";
-    if (std::cin >> maxRange) {
-      // do nothing (values accepted)
-    }
-    else {
-      std::cout << "Invalid value. Exiting progratm." << std::endl;
-      return -1;
-    }
+  if (!(std::cin >> minRange)) {
+    std::cout << "Invalid value. Exiting program." << std::endl;
+    return -1;
   }
-  else {
+
+  std::cout << std::endl << "Largest value: ";
+  if (!(std::cin >> maxRange)) {
     std::cout << "Invalid value. Exiting program." << std::endl;
     return -1;
   }
